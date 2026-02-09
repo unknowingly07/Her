@@ -27,7 +27,7 @@ body {
 }
 
 #envelope{
-    width: 500px;
+    width: 600px;
     animation: pulse 1.5s infinite;
     cursor: pointer;
 }
@@ -42,7 +42,7 @@ body {
 
 .letter-window{
     width: 90vw;
-    max-width: 800px;
+    max-width: 900px;
     aspect-ratio: 3/2;
     padding: 20px 20px 0 20px;
     display: flex;
@@ -93,7 +93,7 @@ p {
 .buttons {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 40px;
     position: relative;
 }
 
@@ -109,7 +109,7 @@ p {
 
 .yes-btn,
 .no-btn {
-width: 120px;
+width: 140px;
 height: auto;
 display: inline-block;
 }
