@@ -22,26 +22,21 @@ envelope.addEventListener("click", () => {
 
 // Logic to move the NO btn
 
-noBtn.style.position = "absolute";
+noBtn.addEventListener("mouseover", () => {
+const min = 90;
+const max = 100;
 
-function moveNoButton() {
-  const padding = 30;
+const distance = Math.random() * (max - min) + min;    
+const angle = Math.random() * Math.PI * 2;    
 
-  const maxX = window.innerWidth - noBtn.offsetWidth - padding;
-  const maxY = window.innerHeight - noBtn.offsetHeight - padding;
+const moveX = Math.cos(angle) * distance;    
+const moveY = Math.sin(angle) * distance;    
 
-  const x = Math.random() * maxX;
-  const y = Math.random() * maxY;
+noBtn.style.transition = "transform 0.3s ease";    
+noBtn.style.transform = `translate(${moveX}px, ${moveY}px)`;
 
-  noBtn.style.left = `${x}px`;
-  noBtn.style.top = `${y}px`;
-}
+});
 
-// desktop
-noBtn.addEventListener("mouseenter", moveNoButton);
-// mobile
-noBtn.addEventListener("touchstart", moveNoButton);
-// Logic to make YES btn to grow
 
 // Logic to make YES btn grow + shake (FIXED)
 
